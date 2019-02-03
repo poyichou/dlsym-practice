@@ -14,6 +14,7 @@ int load_real_malloc() {
 		perror(NULL);
 		return 1;
 	}
+	write(1, "load malloc successfully\n", strlen("load malloc successfully\n"));
 	return 0;
 }
 
