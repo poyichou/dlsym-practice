@@ -3,7 +3,7 @@
 #include <dlfcn.h>
 int main() {
 	void (*func)();
-	void *handle = dlopen("./fakelib.so", RTLD_NOLOAD);
+	void *handle = dlopen("./fakelib.so", RTLD_LAZY);
 	if (!handle) {
 		perror("dlopen");
 		exit(1);
