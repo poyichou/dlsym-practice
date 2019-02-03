@@ -17,6 +17,8 @@ int load_real_malloc() {
 	return 0;
 }
 
+// only this symbol is visible to the users of this shared library.
+__attribute__((__visibility__("default")))
 void *malloc(size_t request_size) {
 	write(1, "ha! you used my malloc\n", strlen("ha! you used my malloc\n"));
 	if(load_real_malloc() != 0) {
