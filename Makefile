@@ -14,6 +14,6 @@ use_dlopen: use_dlopen.c
 	$(CC) -o $@ $^
 run:
 	./hack ./use_malloc
-	./hack ./use_dlopen
+	./use_dlopen
 clean:
 	rm $(FILE)
